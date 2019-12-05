@@ -1,7 +1,6 @@
 package com.mischief.rating.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -13,7 +12,6 @@ import com.mischief.rating.model.Rating;
 import com.mischief.rating.service.RatingServiceImpl;
 
 @RestController
-@CrossOrigin
 @RequestMapping("/rating/code")
 public class RatingController {
 	
@@ -25,8 +23,9 @@ public class RatingController {
 		return ratingService.findRatingById(id);
 	}
 	
-	@PostMapping("/create_rating")
-	public void saveRating(@RequestBody Rating rating) {
+	@PostMapping("/{id}")
+	public void saveRating(@PathVariable("id") Integer id, @RequestBody Rating rating) {
+		rating.setSnippetId(id);
 		ratingService.createRating(rating);
 	}
 	

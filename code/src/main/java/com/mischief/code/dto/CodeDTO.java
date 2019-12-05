@@ -3,7 +3,7 @@ package com.mischief.code.dto;
 import java.util.List;
 
 import com.mischief.code.beans.Code;
-import com.mischief.code.beans.Comment;
+import com.mischief.rating.model.Comment;
 
 public class CodeDTO extends Code {
 	private Double avgRating;

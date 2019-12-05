@@ -17,7 +17,7 @@ public class Comment implements Serializable{
 	private Integer snippetId;
 	
 	@NotNull
-	private Integer devId;
+	private Integer developerId;
 	
 	private String comment;
 	
@@ -36,11 +36,11 @@ public class Comment implements Serializable{
 	public void setSnippetId(Integer snippetId) {
 		this.snippetId = snippetId;
 	}
-	public Integer getDevId() {
-		return devId;
+	public Integer getDeveloperId() {
+		return developerId;
 	}
-	public void setDevId(Integer devId) {
-		this.devId = devId;
+	public void setDeveloperId(Integer devId) {
+		this.developerId = devId;
 	}
 	public String getComment() {
 		return comment;
@@ -53,7 +53,7 @@ public class Comment implements Serializable{
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + ((comment == null) ? 0 : comment.hashCode());
-		result = prime * result + ((devId == null) ? 0 : devId.hashCode());
+		result = prime * result + ((developerId == null) ? 0 : developerId.hashCode());
 		result = prime * result + ((id == null) ? 0 : id.hashCode());
 		result = prime * result + ((snippetId == null) ? 0 : snippetId.hashCode());
 		return result;
@@ -72,10 +72,10 @@ public class Comment implements Serializable{
 				return false;
 		} else if (!comment.equals(other.comment))
 			return false;
-		if (devId == null) {
-			if (other.devId != null)
+		if (developerId == null) {
+			if (other.developerId != null)
 				return false;
-		} else if (!devId.equals(other.devId))
+		} else if (!developerId.equals(other.developerId))
 			return false;
 		if (id == null) {
 			if (other.id != null)
@@ -91,6 +91,6 @@ public class Comment implements Serializable{
 	}
 	@Override
 	public String toString() {
-		return "Comment [id=" + id + ", snippetId=" + snippetId + ", devId=" + devId + ", comment=" + comment + "]";
+		return "Comment [id=" + id + ", snippetId=" + snippetId + ", developerId=" + developerId + ", comment=" + comment + "]";
 	}
 }

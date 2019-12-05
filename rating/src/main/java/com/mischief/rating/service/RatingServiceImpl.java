@@ -31,7 +31,7 @@ public class RatingServiceImpl implements RatingService {
 		int sum = 0;
 		int count = 0;
 		for (Rating r : ratings) {
-			if (r.getSnippet_id() == id) {
+			if (r.getSnippetId() == id) {
 				sum += r.getBeers();
 				count++;
 			}

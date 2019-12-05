@@ -18,9 +18,9 @@ public class Rating implements Serializable{
 	private int id;
 	
 	@NotNull
-	private int snippet_id;
+	private int snippetId;
 	
-	private int dev_id;
+	private int developerId;
 	
 	@Range(min=1, max=5)
 	private int beers;
@@ -32,8 +32,8 @@ public class Rating implements Serializable{
 	public Rating(int id, int snippet_id, int dev_id, int beers) {
 		super();
 		this.id = id;
-		this.snippet_id = snippet_id;
-		this.dev_id = dev_id;
+		this.snippetId = snippet_id;
+		this.developerId = dev_id;
 		this.beers = beers;
 	}
 	public int getId() {
@@ -42,17 +42,17 @@ public class Rating implements Serializable{
 	public void setId(int id) {
 		this.id = id;
 	}
-	public int getSnippet_id() {
-		return snippet_id;
+	public int getSnippetId() {
+		return snippetId;
 	}
-	public void setSnippet_id(int snippet_id) {
-		this.snippet_id = snippet_id;
+	public void setSnippetId(int snippet_id) {
+		this.snippetId = snippet_id;
 	}
-	public int getDev_id() {
-		return dev_id;
+	public int getDeveloperId() {
+		return developerId;
 	}
-	public void setDev_id(int dev_id) {
-		this.dev_id = dev_id;
+	public void setDeveloperId(int dev_id) {
+		this.developerId = dev_id;
 	}
 	public int getBeers() {
 		return beers;
@@ -62,16 +62,17 @@ public class Rating implements Serializable{
 	}
 	@Override
 	public String toString() {
-		return "Rating [id=" + id + ", snippet_id=" + snippet_id + ", dev_id=" + dev_id + ", beers=" + beers + "]";
+		return "Rating [id=" + id + ", snippetId=" + snippetId + ", developerId=" + developerId + ", beers=" + beers
+				+ "]";
 	}
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + beers;
-		result = prime * result + dev_id;
+		result = prime * result + developerId;
 		result = prime * result + id;
-		result = prime * result + snippet_id;
+		result = prime * result + snippetId;
 		return result;
 	}
 	@Override
@@ -85,11 +86,11 @@ public class Rating implements Serializable{
 		Rating other = (Rating) obj;
 		if (beers != other.beers)
 			return false;
-		if (dev_id != other.dev_id)
+		if (developerId != other.developerId)
 			return false;
 		if (id != other.id)
 			return false;
-		if (snippet_id != other.snippet_id)
+		if (snippetId != other.snippetId)
 			return false;
 		return true;
 	}
