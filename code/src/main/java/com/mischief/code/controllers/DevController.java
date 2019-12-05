@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -32,12 +33,13 @@ public class DevController {
 	}
 
 	@PostMapping
-	public Developer addDeveloper(Developer dev) {
+	public Developer addDeveloper(@RequestBody Developer dev) {
+		System.out.println(dev);
 		return ds.addDeveloper(dev);
 	}
 
 	@PutMapping(value = "/{dev_id}")
-	public Developer updateDeveloper(@PathVariable("dev_id") Integer id, Developer dev) {
+	public Developer updateDeveloper(@PathVariable("dev_id") Integer id, @RequestBody Developer dev) {
 		return ds.addDeveloper(dev);
 	}
 }
