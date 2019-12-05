@@ -9,8 +9,9 @@ function App() {
   return (
     <div className="App">
       <Routing></Routing>
-    
-      <div class="jumbotron text-center" style={{marginBottom:0}}>
+    <br></br>
+    <br></br>
+      <div class="bg-secondary text-center" style={{marginBottom:0}}>
        <h1>Team Mischief</h1>
        <h2>Creating Bugs Since 2019</h2>
 </div>
