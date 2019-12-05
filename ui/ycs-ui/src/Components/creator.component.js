@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import { Form, Button } from 'react-bootstrap';
 import CodeService from '../Services/code.service';
+import DevService from '../Services/dev.service';
 
 class Creator extends Component {
 
     codeService = new CodeService();
+    devService = new DevService();
 
     constructor(props) {
         super(props)
@@ -28,7 +30,7 @@ class Creator extends Component {
         let newCode = this.state.code;
         newCode = {
             ...newCode,
-            handle: event.target.value
+            snippet: event.target.value
         }
         this.setState({ code: newCode });
     }
@@ -54,12 +56,12 @@ class Creator extends Component {
         return <Form onSubmit={this.handleSubmit}>
             <Form.Group controlId="formHandle">
                 <Form.Label>Code Snippet</Form.Label>
-                <Form.Control value={this.state.code.snippet} onChange={this.handleSnippetChange} type="text" placeholder="hack$tr" />
+                <Form.Control value={this.state.code.snippet} onChange={this.handleSnippetChange} type="text" as="textarea"/>
             </Form.Group>
 
             <Form.Group controlId="formImg">
                 <Form.Label>Dev</Form.Label>
-                <Form.Control value={this.state.code.dev} onChange={this.handleDevChange} type="text" label="Dev" placeholder="https://images.app.goo.gl/ndfBHLYvnPsrxLQw5" />
+                <Form.Control value={this.state.code.dev.handle} onChange={this.handleDevChange} type="text" label="Dev"/>
                 <Form.Text className="text-muted">
                     Who wrote this aweful trash
           </Form.Text>
