@@ -25,11 +25,17 @@ public class Code {
 	public Code() {
 		super();
 	}
-	public Integer getCodeId() {
+	public Code(Integer id, String snippet, Developer dev) {
+		super();
+		this.id = id;
+		this.snippet = snippet;
+		this.dev = dev;
+	}
+	public Integer getId() {
 		return id;
 	}
-	public void setCodeId(Integer codeId) {
-		this.id = codeId;
+	public void setId(Integer id) {
+		this.id = id;
 	}
 	public String getSnippet() {
 		return snippet;

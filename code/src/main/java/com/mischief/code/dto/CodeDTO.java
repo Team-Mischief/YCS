@@ -2,35 +2,17 @@ package com.mischief.code.dto;
 
 import java.util.List;
 
+import com.mischief.code.beans.Code;
 import com.mischief.code.beans.Comment;
-import com.mischief.code.beans.Developer;
 
-public class CodeDTO {
-	private Integer id;
-	private String snippet;
-	private Developer dev;
+public class CodeDTO extends Code {
 	private Double avgRating;
 	private List<Comment> commentList;
 	public CodeDTO() {
 		super();
 	}
-	public Integer getId() {
-		return id;
-	}
-	public void setId(Integer id) {
-		this.id = id;
-	}
-	public String getSnippet() {
-		return snippet;
-	}
-	public void setSnippet(String snippet) {
-		this.snippet = snippet;
-	}
-	public Developer getDev() {
-		return dev;
-	}
-	public void setDev(Developer dev) {
-		this.dev = dev;
+	public CodeDTO(Code c) {
+		super(c.getId(), c.getSnippet(), c.getDev());
 	}
 	public Double getAvgRating() {
 		return avgRating;
@@ -47,19 +29,16 @@ public class CodeDTO {
 	@Override
 	public int hashCode() {
 		final int prime = 31;
-		int result = 1;
+		int result = super.hashCode();
 		result = prime * result + ((avgRating == null) ? 0 : avgRating.hashCode());
 		result = prime * result + ((commentList == null) ? 0 : commentList.hashCode());
-		result = prime * result + ((dev == null) ? 0 : dev.hashCode());
-		result = prime * result + ((id == null) ? 0 : id.hashCode());
-		result = prime * result + ((snippet == null) ? 0 : snippet.hashCode());
 		return result;
 	}
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
 			return true;
-		if (obj == null)
+		if (!super.equals(obj))
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
@@ -74,26 +53,10 @@ public class CodeDTO {
 				return false;
 		} else if (!commentList.equals(other.commentList))
 			return false;
-		if (dev == null) {
-			if (other.dev != null)
-				return false;
-		} else if (!dev.equals(other.dev))
-			return false;
-		if (id == null) {
-			if (other.id != null)
-				return false;
-		} else if (!id.equals(other.id))
-			return false;
-		if (snippet == null) {
-			if (other.snippet != null)
-				return false;
-		} else if (!snippet.equals(other.snippet))
-			return false;
 		return true;
 	}
 	@Override
 	public String toString() {
-		return "CodeDTO [id=" + id + ", snippet=" + snippet + ", dev=" + dev + ", avgRating=" + avgRating
-				+ ", commentList=" + commentList + "]";
+		return "CodeDTO [avgRating=" + avgRating + ", commentList=" + commentList + "]";
 	}
 }
