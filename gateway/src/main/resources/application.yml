@@ -1,13 +1,19 @@
 spring:
   application:    name: steve
 zuul:
-  prefix: /BookStore
+  prefix: /mischief
   routes:
-    ratings:
-      path: /code/**, /dev/**
+    code_code:
+      path: /code/**
       service-id: code-service
-    codes:
-      path: /rating/**, /comment/**
+    code_dev:
+      path: /dev/**
+      service_id: code-service
+    rating_rating:
+      path: /rating/**
+      service-id: rating-service
+    rating_comment:
+      path: /comment/**
       service-id: rating-service
 server:  port: 9000
 management:  security:    enabled: false
