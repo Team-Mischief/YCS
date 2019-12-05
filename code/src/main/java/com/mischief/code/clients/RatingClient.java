@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.mischief.code.beans.Comment;
 
-//@FeignClient("rating")
+@FeignClient("rating-service")
 public interface RatingClient {
 	@RequestMapping(method = RequestMethod.GET, value = "/rating/code/{code_id}/average")
     Double getRatings(@PathVariable("code_id") Integer id);
