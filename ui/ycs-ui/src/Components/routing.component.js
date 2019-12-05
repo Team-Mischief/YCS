@@ -10,13 +10,13 @@ class Routing extends Component {
 
         return <Router>
             <div>
-                <Navbar bg="light" expand="lg">
-                    <Navbar.Brand href="/">Your Code Sucks</Navbar.Brand>
+                <Navbar id="navBar" bg="light" expand="lg">
+                    <Navbar.Brand id="navBrand" href="/">Your Code Sucks</Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="mr-auto">
-                            <Nav.Link href="register">Register</Nav.Link>
-                            <Nav.Link href="review">Snippet Review</Nav.Link>
+                            <Nav.Link id="registerLink" href="register">Register</Nav.Link>
+                            <Nav.Link id="reviewLink" href="review">Snippet Review</Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Navbar>
