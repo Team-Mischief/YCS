@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { Form, Button } from 'react-bootstrap';
-import DevService from '../Services/dev.service';
+import CodeService from '../Services/code.service';
 
 class Creator extends Component {
 
-    devService = new DevService();
+    codeService = new CodeService();
 
     constructor(props) {
         super(props)
@@ -30,20 +30,21 @@ class Creator extends Component {
             ...newCode,
             handle: event.target.value
         }
-        this.setState({ dev: newDev });
+        this.setState({ code: newCode });
     }
 
-    handlePicChange(event) {
-        let newDev = this.state.dev;
-        newDev = {
-            ...newDev,
-            picture: event.target.value
+    handleDevChange(event) {
+        let newCode = this.state.code;
+        let newDev = {developer_id: event.target.value};
+        newCode = {
+            ...newCode,
+            dev: newDev
         }
-        this.setState({ dev: newDev });
+        this.setState({ code: newCode });
     }
 
     handleSubmit(event) {
-        this.devService.registerDev(this.state.dev)
+        this.codeService.registerCode(this.state.code)
             .then((ret) => { console.log(ret) });
         event.preventDefault();
     }
@@ -71,4 +72,4 @@ class Creator extends Component {
 
 }
 
-export default Register;
+export default Creator;

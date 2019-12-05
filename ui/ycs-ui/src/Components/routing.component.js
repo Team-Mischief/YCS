@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Route, BrowserRouter as Router } from 'react-router-dom'
 import Register from './register.component'
 import SnippetReview from './snippet-review.component'
-import Creator from './'
 import { Navbar, Nav } from 'react-bootstrap';
 import './routing.css';
 import Creator from './creator.component'
@@ -26,6 +25,7 @@ class Routing extends Component {
                         <Nav className="mr-auto">
                             <Nav.Link id="registerLink" href="register">Register</Nav.Link>
                             <Nav.Link id="reviewLink" href="review">Snippet Review</Nav.Link>
+                            <Nav.Link id="creatorLink" href="creator">Code Creator</Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Navbar>
