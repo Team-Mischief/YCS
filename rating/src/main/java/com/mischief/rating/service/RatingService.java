@@ -8,8 +8,8 @@ public interface RatingService {
 
 	void createRating(Rating rating);
 
-	double getAverageRatingById(int id);
-
 	void deleteRatingById(int id);
+
+	double getAverageRatingByCodeId(int id);
 
 }

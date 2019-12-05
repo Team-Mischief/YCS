@@ -1,5 +1,7 @@
 package com.mischief.rating.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -9,31 +11,28 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.mischief.rating.model.Rating;
-import com.mischief.rating.service.RatingServiceImpl;
+import com.mischief.rating.model.Comment;
+import com.mischief.rating.service.CommentServiceImpl;
 
 @RestController
 @CrossOrigin
-@RequestMapping("/rating/code")
-public class RatingController {
-	
+@RequestMapping("/comment/code")
+public class CommentController {
 	@Autowired
-	RatingServiceImpl ratingService;
+	private CommentServiceImpl commentService;
 	
 	@GetMapping("/{id}")
-	public Rating getById(@PathVariable("id") int id) {
-		return ratingService.findRatingById(id);
+	public Comment getById(@PathVariable("id") int id) {
+		return commentService.findCommentById(id);
 	}
 	
-	@PostMapping("/create_rating")
-	public void saveRating(@RequestBody Rating rating) {
-		ratingService.createRating(rating);
+	@PostMapping("/create_comment")
+	public void saveComment(@RequestBody Comment comment) {
+		commentService.createComment(comment);
 	}
 	
-	@GetMapping("/{id}/average")
-	public double getRatingForCode(@PathVariable("id") int id) {
-		
-		return ratingService.getAverageRatingByCodeId(id);
+	@GetMapping("/{id}/by_code_id")
+	public List<Comment> getCommentsByCode(@PathVariable("id") int id){
+		return commentService.findByCodeId(id);
 	}
-	
 }
