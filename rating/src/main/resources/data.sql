@@ -4,7 +4,7 @@ insert into rating values(3,4,3,5);
 insert into rating values(4,5,8,4);
 
 
-insert into comment values(1,1,1,'hello');
-insert into comment values(2,1,1,'hi there');
-insert into comment values(3,1,1,'hi');
-insert into comment values(4,1,1,'something');
+insert into comment values(1,'hello',4,2);
+insert into comment values(2,'hi',7,6);
+insert into comment values(3,'hiya',9,11);
+insert into comment values(4,'howdy',4,22);
