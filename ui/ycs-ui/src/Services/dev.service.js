@@ -10,6 +10,12 @@ class DevService {
         dev);
     }
 
+    getDevs() {
+        return axios.get(
+            'http://localhost:9000/mischief/dev/dev'
+        )
+    }
+
 }
 
 export default DevService;
