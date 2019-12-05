@@ -5,16 +5,26 @@ import java.io.Serializable;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
+
+import org.hibernate.validator.constraints.Range;
 
 @Entity
 public class Rating implements Serializable{
 	@Id
 	@GeneratedValue
 	private int id;
+	
+	@NotNull
 	private int snippet_id;
+	
 	private int dev_id;
-	//1-5
+	
+	@Range(min=1, max=5)
 	private int beers;
+	
 	public Rating() {
 		super();
 		// TODO Auto-generated constructor stub
