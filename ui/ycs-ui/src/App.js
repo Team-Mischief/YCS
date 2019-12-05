@@ -3,10 +3,12 @@ import logo from './logo.svg';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button, ButtonToolbar } from 'react-bootstrap';
+import Routing from './Components/routing.component';
 
 function App() {
   return (
     <div className="App">
+      <Routing></Routing>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -31,8 +33,8 @@ function App() {
         <Button variant="light">Light</Button>
         <Button variant="dark">Dark</Button>
         <Button variant="link">Link</Button>
-      </ButtonToolbar>
-    </div>
+      </ButtonToolbar >
+    </div >
   );
 }
 
