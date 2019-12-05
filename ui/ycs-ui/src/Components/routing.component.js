@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route, Link, BrowserRouter as Router } from 'react-router-dom'
+import { Route, BrowserRouter as Router } from 'react-router-dom'
 import Register from './register.component'
 import SnippetReview from './snippet-review.component'
 import { Navbar, Nav } from 'react-bootstrap';
@@ -19,7 +19,7 @@ class Routing extends Component {
                         className="d-inline-block align-top"
                         alt="React Bootstrap logo"
                     />
-                    <Navbar.Brand id="navBrand" class="display-1" href="/"> Your Code Sucks</Navbar.Brand>
+                    <Navbar.Brand id="navBrand" className="display-1" href="/"> Your Code Sucks</Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="mr-auto">
