@@ -1,0 +1,20 @@
+spring:
+  application:    name: steve
+zuul:
+  prefix: /BookStore
+  routes:
+    ratings:
+      path: /code/**, /dev/**
+      service-id: code-service
+    codes:
+      path: /rating/**, /comment/**
+      service-id: rating-service
+server:  port: 9000
+management:  security:    enabled: false
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    lease-expiration-duration-in-seconds: 2
+    lease-renewal-interval-in-seconds: 1
