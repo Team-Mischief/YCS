@@ -5,6 +5,8 @@ import SnippetReview from './snippet-review.component'
 import { Navbar, Nav } from 'react-bootstrap';
 import './routing.css';
 import SnippetFinder from './snippet-finder.component';
+import SnippetCreator from './snippet-creator.component';
+import Home from './home.component';
 
 class Routing extends Component {
 
@@ -27,14 +29,19 @@ class Routing extends Component {
                             <Nav.Link id="registerLink" href="register">Register</Nav.Link>
                             <Nav.Link id="reviewLink" href="review">Snippet Review</Nav.Link>
                             <Nav.Link id="finderLink" href="finder">Snippet Finder</Nav.Link>
+                            <Nav.Link id="creatorLink" href="creator">Snippet Creator</Nav.Link>
+
                         </Nav>
                     </Navbar.Collapse>
                 </Navbar>
-                <Route exact path="/" component={Register} />
+                <Route exact path="/" component={Home} />
                 <Route path="/review" component={SnippetReview} />
                 <Route path="/register" component={Register} />
                 <Route path="/finder" component={SnippetFinder} />
+                <Route path="/create" component= {SnippetCreator} />
             </div>
+            <div></div>
+            <br></br>
         </Router>
 
     }
