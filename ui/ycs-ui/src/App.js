@@ -14,7 +14,12 @@ function App() {
     <br></br>
      
 
-    </div >
+    
+    <div class="bg-secondary text-center" style={{marginBottom:0}}>
+    <h1>Team Mischief</h1>
+    <h2>Creating Bugs Since 2019</h2>
+   </div>
+   </div>
   );
 }
 

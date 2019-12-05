@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { Route, BrowserRouter as Router } from 'react-router-dom'
 import Register from './register.component'
-import SnippetReview from './snippet-review.component'
+import SnippetReview from './snippet-review.component';
+
 import { Navbar, Nav } from 'react-bootstrap';
 import './routing.css';
 
@@ -41,11 +42,14 @@ class Routing extends Component {
                 <Route path="/review" component={SnippetReview} />
                 <Route path="/register" component={Register} />
                 <Route path="/creator" component={Creator} />
+                <Route path="/finder" component={SnippetFinder} />
 
             </div>
             <div></div>
             <br></br>
+            
         </Router>
+        
 
     }
 
