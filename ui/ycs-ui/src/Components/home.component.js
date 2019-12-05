@@ -56,6 +56,14 @@ class Home extends Component {
                         className="d-inline-block align-top"
                         alt="React Bootstrap logo"
                     /></Col>
+                    
+    <Col> <img
+                        src="/six.jpg"
+                        width="400"
+                        height="400"
+                        className="d-inline-block align-top"
+                        alt="React Bootstrap logo"
+                    /></Col>
     <Col> <img
                         src="/nine.jpg"
                         width="400"
