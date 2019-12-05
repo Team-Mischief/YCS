@@ -2,9 +2,10 @@ import React, { Component } from 'react';
 import { Route, BrowserRouter as Router } from 'react-router-dom'
 import Register from './register.component'
 import SnippetReview from './snippet-review.component'
+import Creator from './'
 import { Navbar, Nav } from 'react-bootstrap';
 import './routing.css';
-
+import Creator from './creator.component'
 class Routing extends Component {
 
     render() {
@@ -31,6 +32,7 @@ class Routing extends Component {
                 <Route exact path="/" component={Register} />
                 <Route path="/review" component={SnippetReview} />
                 <Route path="/register" component={Register} />
+                <Route path="/creator" component={Creator} />
             </div>
         </Router>
 
