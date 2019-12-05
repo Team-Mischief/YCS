@@ -3,6 +3,7 @@ import { Route, Link, BrowserRouter as Router } from 'react-router-dom'
 import Register from './register.component'
 import SnippetReview from './snippet-review.component'
 import { Navbar, Nav } from 'react-bootstrap';
+import './routing.css';
 
 class Routing extends Component {
 
@@ -10,8 +11,15 @@ class Routing extends Component {
 
         return <Router>
             <div>
-                <Navbar id="navBar" bg="light" expand="lg">
-                    <Navbar.Brand id="navBrand" href="/">Your Code Sucks</Navbar.Brand>
+                <Navbar id="navBar" bg="light" expand="lg" sticky="top">
+                    <img
+                        src="/YCSIcon.png"
+                        width="50"
+                        height="50"
+                        className="d-inline-block align-top"
+                        alt="React Bootstrap logo"
+                    />
+                    <Navbar.Brand id="navBrand" class="display-1" href="/"> Your Code Sucks</Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="mr-auto">
