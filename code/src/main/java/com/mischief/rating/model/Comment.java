@@ -1,6 +1,8 @@
-package com.mischief.code.beans;
+package com.mischief.rating.model;
 
-public class Comment {
+import java.io.Serializable;
+
+public class Comment implements Serializable {
 	private Integer id;
 	private Integer snippetId;
 	private Integer devId;

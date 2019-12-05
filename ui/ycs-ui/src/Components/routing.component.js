@@ -4,7 +4,7 @@ import Register from './register.component'
 import SnippetReview from './snippet-review.component'
 import { Navbar, Nav } from 'react-bootstrap';
 import './routing.css';
-
+import Creator from './creator.component'
 class Routing extends Component {
 
     render() {
@@ -25,12 +25,14 @@ class Routing extends Component {
                         <Nav className="mr-auto">
                             <Nav.Link id="registerLink" href="register">Register</Nav.Link>
                             <Nav.Link id="reviewLink" href="review">Snippet Review</Nav.Link>
+                            <Nav.Link id="creatorLink" href="creator">Code Creator</Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Navbar>
                 <Route exact path="/" component={Register} />
                 <Route path="/review" component={SnippetReview} />
                 <Route path="/register" component={Register} />
+                <Route path="/creator" component={Creator} />
             </div>
         </Router>
 

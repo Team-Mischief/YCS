@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.mischief.code.beans.Comment;
+import com.mischief.rating.model.Comment;
 
 @FeignClient("rating-service")
 public interface RatingClient {
