@@ -5,5 +5,5 @@ Feature: Snippet Creator
 	Given The user is on the Snippet Creator Page
 	When The user fills in the snippet box
 	When The user presses save 
-	Then The user is on that snippet review page
+	Then The url is the creator
 	

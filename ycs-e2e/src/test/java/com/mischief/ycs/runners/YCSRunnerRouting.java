@@ -16,10 +16,11 @@ import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features ="src/test/resources", glue = "com.mischief.ycs.steps")
-public class YCSRunner {
+@CucumberOptions(features ="src/test/resources/Routing.feature", glue = "com.mischief.ycs.steps")
+public class YCSRunnerRouting {
 		
 	public static WebDriver driver;
+	public static String url = "http://localhost:3000/";
 	
 	@BeforeClass 
 	public static void  setUp(){

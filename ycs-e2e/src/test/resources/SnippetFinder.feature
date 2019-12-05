@@ -6,6 +6,7 @@ Feature: Snippet Finder
 	Given The user is on the Snippet Finder page
 	When The user clicks view all
 	Then A list of all snippets is paginated
+	Then The url is finder
 	
 	
 	Scenario: Find a snippet 
@@ -37,7 +38,7 @@ Feature: Snippet Finder
 	Given The user is on the Snippet Finder page
 	When The user clicks view all
 	When The user clicks a snippet
-	Then The user is on the snippet review page
+	Then The url is review 
 	
 	
 	
